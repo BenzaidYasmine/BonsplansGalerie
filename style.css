@@ -13,8 +13,8 @@ body {
 /* Header */
 .header {
     /* background: black; */
-    background: rgb(206, 198, 198);
-    
+    background: rgb(189, 187, 187);
+
 
     overflow: auto;
     line-height: 1.7em;
@@ -24,7 +24,7 @@ body {
     float: left;
     padding: 20px;
     margin-bottom: 0;
-    
+
 
 }
 
@@ -52,20 +52,17 @@ body {
     list-style: none;
     text-decoration: none;
     font-family: cursive;
-    
+
 }
 
 .header nav ul li a:hover,
 .active {
     /* background: #CB9772; */
     font-weight: bold;
-    font-size:1.2rem ;
+    font-size: 1.2rem;
 }
 
 
-
-    
-    
 
 .container {
     display: flex;
@@ -79,7 +76,6 @@ body {
 }
 
 .title {
-    
     font: italic small-caps bold 2rem cursive;
 }
 
@@ -87,12 +83,11 @@ body {
     margin-right: 40px;
     font-size: 20px;
     color: #0f0f0f;
-    
+
 }
 
 
 /* galerie */
-
 section {
     margin: 30px 0;
 }
@@ -101,7 +96,6 @@ section {
     margin: 40px 30px;
     display: flex;
     flex-direction: row;
-
 
 }
 
@@ -115,7 +109,6 @@ section {
 
 /* Menu */
 .menu {
-
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -151,6 +144,7 @@ section {
 .slide-img {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -165,7 +159,9 @@ section {
 
 }
 
-img{ box-shadow:8px 8px 10px 0 rgba(80, 79, 79, 0.5);}
+img {
+    box-shadow: 8px 8px 10px 0 rgba(80, 79, 79, 0.5);
+}
 
 [id^="slide"]:checked+.slide-img {
     left: auto;
@@ -185,21 +181,24 @@ img{ box-shadow:8px 8px 10px 0 rgba(80, 79, 79, 0.5);}
 /* *************************** */
 .conteneur {
     display: grid;
-    grid: " elements elements elements  " 1fr " elements elements elements" 1fr " elements elements elements " 1fr "elements elements  elements " 1fr / 1fr 1fr 1fr;
-
+    grid: " element element element  " 1fr " element element element" 1fr " element element element " 1fr "element element  element " 1fr / 1fr 1fr 1fr;
+    flex-wrap: wrap;
     /* background-color: red; */
 }
 
 .element {
-    height: 600px;
+    height: 450px;
     width: 300px;
     margin: 20px auto 20px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 .images {
     /* background-color: orange; */
     height: 300px;
+
 
 
 }
@@ -234,3 +233,93 @@ img{ box-shadow:8px 8px 10px 0 rgba(80, 79, 79, 0.5);}
 p span {
     font-weight: bold;
 }
+
+
+/* Les téléphones */
+@media only screen and (max-width: 767px) {
+    body {
+        background: linear-gradient(to left, #6d6c6c, #b4b2b2, #e7e6e5) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .header nav ul {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .header nav ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    .conteneur {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .element {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 450px;
+    }
+
+    .slide-img {
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* Les tablettes */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .conteneur {
+        grid:
+            " element element  " 1fr " element element " 1fr " element element  " 1fr "element element  " 1fr / 1fr 1fr;
+    }
+
+    .element {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 450px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        height: 50px;
+    }
+
+
+}
+
+/*Les grands écrans*/
+
+@media only screen and (min-width: 1500px) {
+    .conteneur {
+        grid:
+            " element element element element " 1fr
+            " element element element element" 1fr
+            " element element element element" 1fr
+            "element element element element" 1fr / 1fr 1fr 1fr 1fr;
+    }
+
+    /* Ajoutez d'autres ajustements pour les grands écrans selon vos besoins */
+}
+
+
+
