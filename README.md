@@ -1,6 +1,9 @@
 # BonsplansGalerie
 Un site de vente sous forme de galerie.
-Responsive pris en compte.
+
+Responsive sur téléphone, tablette, pc et grand écran pris en compte.
+
+Décelopper uniquement avec du HTML & CSS
 
 Téléphone
 
