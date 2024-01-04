@@ -1,5 +1,7 @@
 # BonsplansGalerie
-Un site de vente sous forme de galerie.
+Un site de vente sous forme de galerie.  
+
+C'est juste ici: https://galerievente.netlify.app
 
 Responsive sur téléphone, tablette, pc et grand écran pris en compte.
 
